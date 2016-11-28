@@ -61,7 +61,7 @@ class teleop_CS extends LinearOpMode {
 
     /* Declare OpMode members. */
     private Hardware        robot           = new Hardware();              // Use hardware program
-    /*
+    /* (Servo Code)
     double          arm1Position     = robot.ARM1_HOME;                   // Servo safe position
     double          arm2Position    = robot.ARM2_HOME;                  // Servo safe position
     final double    ARM1_SPEED      = 0.01 ;                            // sets rate to move servo
@@ -73,7 +73,7 @@ class teleop_CS extends LinearOpMode {
         double left;
         double right;
         double shooter;
-        //double particle;
+        double particle;
 
         /* Initialize the hardware variables.
          * The init() method of the hardware class does all the work here
@@ -93,42 +93,42 @@ class teleop_CS extends LinearOpMode {
             // Run wheels in tank mode (note: The joystick goes negative when pushed forwards, so negate it)
             left = Range.clip(-gamepad1.left_stick_y, -0.7,0.7);
             right = Range.clip(-gamepad1.right_stick_y, -0.7,0.7);
+            shooter = -gamepad2.right_stick_y;
+            particle = -gamepad2.left_stick_y;
             robot.leftMotor1.setPower(left);
             robot.leftMotor2.setPower(left);
             robot.rightMotor1.setPower(right);
             robot.rightMotor2.setPower(right);
-            shooter = -gamepad2.left_stick_y;
-            //robot.particleMotor.setPower(particle);
 
             // Use gamepad Y & A raise and lower the arm
-            /*
+            /* (Servo Code)
             if (gamepad2.a)
                 arm1Position += ARM1_SPEED;
             else if (gamepad2.y)
                 arm1Position -= ARM1_SPEED;
             */
-            if (-gamepad2.right_stick_y > 0) { //gamepad 2 right Stick up spins clockwise
-                robot.shootRightMotor.setPower(1);
+            if (-gamepad2.right_stick_y > 0) { //Gamepad2 Right Stick Y is less than zero so shooterMotor spins counterclockwise relative to motor
+                robot.shooterMotor.setPower(1);
             }
-            else if (-gamepad2.right_stick_y < 0) { //gamepad 2 right Stick still no movement
-                robot.shootRightMotor.setPower(-1);
+            else if (-gamepad2.right_stick_y < 0) { //Gamepad2 Right Stick Y is more than zero so shooterMotor spins clockwise relative to motor
+                robot.shooterMotor.setPower(-1);
             }
-            else { //gamepad 2 right Stick down spins counterclockwise
-                robot.shootRightMotor.setPower(0);
+            else { //Gamepad2 Right Stick Y is still so shooterMotor doesn't move
+                robot.shooterMotor.setPower(0);
             }
-            if (-gamepad2.left_stick_y > 0) { //gamepad 2 left Stick up spins clockwise
-                robot.shootLeftMotor.setPower(1);
+            if (-gamepad2.left_stick_y > 0) { //Gamepad2 Left Stick Y is less than zero so particleMotor spins counterclockwise relative to motor
+                robot.particleMotor.setPower(1);
             }
-            else if (-gamepad2.left_stick_y < 0) { //gamepad 2 left Stick down spins counterclockwise
-                robot.shootLeftMotor.setPower(-1);
+            else if (-gamepad2.left_stick_y < 0) { //Gamepad2 Left Stick Y is more than zero so particleMotor spins clockwise relative to motor
+                robot.particleMotor.setPower(-1);
             }
-            else { //gamepad 2 left Stick still no movement
-                robot.shootLeftMotor.setPower(0);
+            else { //Gamepad2 Left Stick Y is still so particleMotor doesn't move
+                robot.particleMotor.setPower(0);
             }
 
 
             // Use gamepad X & B to open and close the claw
-            /*
+            /* (Servo Code)
            if (gamepad2.x)
                 arm2Position += ARM2_SPEED;
             else if (gamepad2.b)
@@ -136,7 +136,7 @@ class teleop_CS extends LinearOpMode {
             */
 
             // Move both servos to new position.
-            /*
+            /* (Servo Code)
             arm1Position  = Range.clip(arm1Position, robot.ARM1_MIN_RANGE, robot.ARM1_MAX_RANGE);
             robot.armServo1.setPosition(arm1Position);
             arm2Position = Range.clip(arm2Position, robot.ARM2_MIN_RANGE, robot.ARM2_MAX_RANGE);
@@ -144,12 +144,15 @@ class teleop_CS extends LinearOpMode {
             */
 
 
-            // Send telemetry message to signify robot running;
-            //telemetry.addData("arm1",   "%.2f", arm1Position);
-            //telemetry.addData("arm2",  "%.2f", arm2Position);
+            //Send telemetry message to signify robot running;
+            /* (Servo Code)
+            telemetry.addData("arm1",   "%.2f", arm1Position);
+            telemetry.addData("arm2",  "%.2f", arm2Position);
+            */
             telemetry.addData("left",  "%.2f", left);
             telemetry.addData("right", "%.2f", right);
             telemetry.addData("shooter", "%.2f", shooter);
+            telemetry.addData("particle", "%.2f", particle);
             telemetry.update();
 
             // Pause for metronome tick.  40 mS each cycle = update 25 times a second.
