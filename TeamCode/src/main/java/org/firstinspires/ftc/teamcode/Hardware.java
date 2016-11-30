@@ -36,16 +36,15 @@ public class Hardware
     DcMotor rightMotor1  = null;
     DcMotor leftMotor2   = null;
     DcMotor rightMotor2  = null;
-    //DcMotor particleMotor = null;
-    DcMotor shootRightMotor = null;
-    DcMotor shootLeftMotor = null;
-    /*
+    DcMotor particleMotor = null;
+    DcMotor shooterMotor = null;
+    /* (Servo Code)
     Servo armServo1         = null;
     Servo armServo2         = null;
     */
 
     // this code determines the servo home positions and sets the minimum and maximum ranges
-    /*
+    /* (Servo Code)
     final static double ARM1_HOME = 0.5;
     final static double ARM2_HOME = 0.2;
     final static double ARM1_MIN_RANGE  = 0.20;
@@ -68,12 +67,11 @@ public class Hardware
         rightMotor1  = ahwMap.dcMotor.get("Right Motor 1");
         leftMotor2   = ahwMap.dcMotor.get("Left Motor 2");
         rightMotor2  = ahwMap.dcMotor.get("Right Motor 2");
-        //particleMotor = ahwMap.dcMotor.get("Particle Motor");
-        shootLeftMotor = ahwMap.dcMotor.get("Shoot Left Motor");
-        shootRightMotor = ahwMap.dcMotor.get("Shoot Right Motor");
+        particleMotor = ahwMap.dcMotor.get("Particle Motor");
+        shooterMotor = ahwMap.dcMotor.get("Shooter Motor");
         leftMotor1.setDirection(DcMotor.Direction.REVERSE);
         leftMotor2.setDirection(DcMotor.Direction.REVERSE);
-        shootLeftMotor.setDirection(DcMotor.Direction.REVERSE);
+        particleMotor.setDirection(DcMotor.Direction.REVERSE);
 
 
         // Set all motors to zero power
@@ -81,9 +79,8 @@ public class Hardware
         rightMotor1.setPower(0);
         leftMotor2.setPower(0);
         rightMotor2.setPower(0);
-        //particleMotor.setPower(0);
-        shootLeftMotor.setPower(0);
-        shootRightMotor.setPower(0);
+        particleMotor.setPower(0);
+        shooterMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
@@ -93,7 +90,7 @@ public class Hardware
         rightMotor2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
         // Define and initialize ALL installed servos.
-        /*
+        /* (Servo Code)
         armServo1 = ahwMap.servo.get("Arm 1");
         armServo2 = ahwMap.servo.get("Arm 2");
         armServo1.setPosition(ARM1_HOME);
