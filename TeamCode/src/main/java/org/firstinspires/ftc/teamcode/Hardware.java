@@ -34,10 +34,11 @@ public class Hardware
     // this is where you can add or remove motors
     DcMotor leftMotor1   = null;
     DcMotor rightMotor1  = null;
-    DcMotor leftMotor2   = null;
-    DcMotor rightMotor2  = null;
+    DcMotor winchMotorLeft = null;
+    DcMotor winchMotorRight = null;
     DcMotor particleMotor = null;
     DcMotor shooterMotor = null;
+    DcMotor armMotor = null;
     /* (Servo Code)
     Servo armServo1         = null;
     Servo armServo2         = null;
@@ -65,29 +66,29 @@ public class Hardware
         // Define and Initialize Motors
         leftMotor1   = ahwMap.dcMotor.get("Left Motor 1");
         rightMotor1  = ahwMap.dcMotor.get("Right Motor 1");
-        leftMotor2   = ahwMap.dcMotor.get("Left Motor 2");
-        rightMotor2  = ahwMap.dcMotor.get("Right Motor 2");
+        winchMotorLeft = ahwMap.dcMotor.get("Left Winch Motor");
+        winchMotorRight = ahwMap.dcMotor.get("Right Winch Motor");
         particleMotor = ahwMap.dcMotor.get("Particle Motor");
         shooterMotor = ahwMap.dcMotor.get("Shooter Motor");
+        armMotor = ahwMap.dcMotor.get("Arm Motor");
         leftMotor1.setDirection(DcMotor.Direction.REVERSE);
-        leftMotor2.setDirection(DcMotor.Direction.REVERSE);
         particleMotor.setDirection(DcMotor.Direction.REVERSE);
 
 
         // Set all motors to zero power
         leftMotor1.setPower(0);
         rightMotor1.setPower(0);
-        leftMotor2.setPower(0);
-        rightMotor2.setPower(0);
+        winchMotorLeft.setPower(0);
+        winchMotorRight.setPower(0);
         particleMotor.setPower(0);
         shooterMotor.setPower(0);
+        armMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
         leftMotor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightMotor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        leftMotor2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        rightMotor2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
 
         // Define and initialize ALL installed servos.
         /* (Servo Code)

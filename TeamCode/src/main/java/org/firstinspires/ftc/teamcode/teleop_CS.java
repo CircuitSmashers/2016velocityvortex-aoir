@@ -96,9 +96,7 @@ class teleop_CS extends LinearOpMode {
             shooter = -gamepad2.right_stick_y;
             particle = -gamepad2.left_stick_y;
             robot.leftMotor1.setPower(left);
-            robot.leftMotor2.setPower(left);
             robot.rightMotor1.setPower(right);
-            robot.rightMotor2.setPower(right);
 
             // Use gamepad Y & A raise and lower the arm
             /* (Servo Code)
@@ -107,7 +105,29 @@ class teleop_CS extends LinearOpMode {
             else if (gamepad2.y)
                 arm1Position -= ARM1_SPEED;
             */
-            if (-gamepad2.right_stick_y > 0) { //Gamepad2 Right Stick Y is less than zero so shooterMotor spins counterclockwise relative to motor
+            //shooter motor, particle motor, and arm motor if/else if/else code
+            if (gamepad2.left_trigger == 1) { //Gamepad2 Left Trigger is equal to one so shooterMotor spins counterclockwise relative to motor
+                robot.shooterMotor.setPower(1);
+            }
+            else if (gamepad2.right_trigger == 1) { //Gamepad2 Right Trigger is equal to one so shooterMotor spins clockwise relative to motor
+                robot.shooterMotor.setPower(-1);
+            }
+            else { //Gamepad2 has no trigger movement so shooterMotor doesn't move
+                robot.shooterMotor.setPower(0);
+            }
+            if (-gamepad2.left_stick_y > 0) { //Gamepad2 Left Stick Y is less than zero so particleMotor spins counterclockwise relative to motor
+                robot.particleMotor.setPower(1);
+            }
+            else if (-gamepad2.left_stick_y < 0) { //Gamepad2 Left Stick Y is more than zero so particleMotor spins clockwise relative to motor
+                robot.particleMotor.setPower(-1);
+            }
+            else { //Gamepad2 Left Stick Y is still so particleMotor doesn't move
+                robot.particleMotor.setPower(0);
+            }
+
+            //winch motors control code
+            /*
+            if (-gamepad2.left_trigger == 1) { //Gamepad2 Right Stick Y is less than zero so shooterMotor spins counterclockwise relative to motor
                 robot.shooterMotor.setPower(1);
             }
             else if (-gamepad2.right_stick_y < 0) { //Gamepad2 Right Stick Y is more than zero so shooterMotor spins clockwise relative to motor
@@ -125,7 +145,7 @@ class teleop_CS extends LinearOpMode {
             else { //Gamepad2 Left Stick Y is still so particleMotor doesn't move
                 robot.particleMotor.setPower(0);
             }
-
+            */
 
             // Use gamepad X & B to open and close the claw
             /* (Servo Code)
