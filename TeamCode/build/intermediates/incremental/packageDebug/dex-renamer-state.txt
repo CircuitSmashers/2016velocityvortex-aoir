@@ -1,4 +1,4 @@
-#Wed Nov 16 16:38:14 CST 2016
-base.0=C\:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Wed Jan 18 16:07:48 CST 2017
+base.0=C\:\\Users\\Sara\\Downloads\\2016velocityvortex-aoir\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=C\:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=C\:\\Users\\Sara\\Downloads\\2016velocityvortex-aoir\\TeamCode\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

@@ -6,7 +6,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-//import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
 
@@ -34,25 +34,22 @@ public class Hardware
     // this is where you can add or remove motors
     DcMotor leftMotor1   = null;
     DcMotor rightMotor1  = null;
-    DcMotor winchMotorLeft = null;
-    DcMotor winchMotorRight = null;
+    DcMotor winchMotor = null;
     DcMotor particleMotor = null;
     DcMotor shooterMotor = null;
-    DcMotor armMotor = null;
-    /* (Servo Code)
-    Servo armServo1         = null;
-    Servo armServo2         = null;
-    */
+    DcMotor conveyorMotor = null;
+
+
+    Servo catcherServo         = null;
+
 
     // this code determines the servo home positions and sets the minimum and maximum ranges
-    /* (Servo Code)
-    final static double ARM1_HOME = 0.5;
-    final static double ARM2_HOME = 0.2;
-    final static double ARM1_MIN_RANGE  = 0.20;
-    final static double ARM1_MAX_RANGE  = 0.7;
-    final static double ARM2_MIN_RANGE  = 0.20;
-    final static double ARM2_MAX_RANGE  = 0.7;
-    */
+
+    final static double MID_SERVO = 0.5;
+    final static double CATCHER_UP_POWER  = 0.45;
+    final static double CATCHER_DOWN_POWER  = -0.45;
+
+
     private ElapsedTime period  = new ElapsedTime();
 
     /* Constructor */
@@ -66,11 +63,10 @@ public class Hardware
         // Define and Initialize Motors
         leftMotor1   = ahwMap.dcMotor.get("Left Motor 1");
         rightMotor1  = ahwMap.dcMotor.get("Right Motor 1");
-        winchMotorLeft = ahwMap.dcMotor.get("Left Winch Motor");
-        winchMotorRight = ahwMap.dcMotor.get("Right Winch Motor");
+        winchMotor = ahwMap.dcMotor.get("Left Winch Motor");
         particleMotor = ahwMap.dcMotor.get("Particle Motor");
         shooterMotor = ahwMap.dcMotor.get("Shooter Motor");
-        armMotor = ahwMap.dcMotor.get("Arm Motor");
+        conveyorMotor = ahwMap.dcMotor.get("Conveyor Motor");
         leftMotor1.setDirection(DcMotor.Direction.REVERSE);
         particleMotor.setDirection(DcMotor.Direction.REVERSE);
 
@@ -78,25 +74,25 @@ public class Hardware
         // Set all motors to zero power
         leftMotor1.setPower(0);
         rightMotor1.setPower(0);
-        winchMotorLeft.setPower(0);
-        winchMotorRight.setPower(0);
+        winchMotor.setPower(0);
         particleMotor.setPower(0);
         shooterMotor.setPower(0);
-        armMotor.setPower(0);
+        conveyorMotor.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
         leftMotor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightMotor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        winchMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        particleMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        shooterMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        conveyorMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
 
         // Define and initialize ALL installed servos.
-        /* (Servo Code)
-        armServo1 = ahwMap.servo.get("Arm 1");
-        armServo2 = ahwMap.servo.get("Arm 2");
-        armServo1.setPosition(ARM1_HOME);
-        armServo2.setPosition(ARM2_HOME);
-        */
+
+        catcherServo = ahwMap.servo.get("Catcher Arm");
+        catcherServo.setPosition(MID_SERVO);
     }
 
     /***

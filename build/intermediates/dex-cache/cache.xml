@@ -3,129 +3,129 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\FtcCommon-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\Hardware-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="ec068454985de756c760317d9c63c23b3ce2055c">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-FtcCommon-release_cfcdd33712fb3b89500c4fd45fad73941c3917bb.jar" />
+        sha1="a82bee948963c3d4ed5b535c680c3183f5d1bcb6">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Hardware-release_760636c1e6df8114c471a3376538c512c6d1310e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\ModernRobotics-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="01999c87afe3d10ffa06f3efa66f39e61e6aba0c">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-ModernRobotics-release_fa70e68b24a056ad177ce1a22277195b95d3245d.jar" />
+        sha1="e9a5b5767c36bef4e83a73a7192e5a6202a2bad7">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\instant-run-bootstrap_c8af627807c06ff74f4341e6186415079024b949.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="f429057dc787d8e619269591f4a08d0366ae63cc">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\instant-run-bootstrap_a2df67f3f0b086bf39d45ebfb214afe962824e33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\Vuforia.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ca5be875a082e7b5f0277a0e85564617b181ae76">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\Vuforia_1766eaef5468dea521852bdda973128fed501fc1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\WirelessP2p-release\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-WirelessP2p-release_b0a2c6c5361a1f158cd2d44b85c4f0085409c22c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="2a24cdb4bd53ff8f890698775608b84ab6703fe2">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-RobotCore-release_7c626c61cf795c3fd1da550ea59b508f168303c5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\Analytics-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\Analytics-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Analytics-release_a5a906150ec85dc0d9fdab6ae4998582a72c1f1c.jar" />
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Analytics-release_afc79c516190676d54528709c649da97725dcb5e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\gson-2.7.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="8c083ada891aaa3cd4240ac9d888ed95c74a4765">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\instant-run_1fe2fb4df9a4a80eddbb1a61c7ecba8ca4372991.jar" />
+        sha1="f6a826116ec7bc3c38197e60ff96e806e2a323b8">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\gson-2.7_98c2b273a58ef8528c6d624dbccb26f433d6bc2e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\Hardware-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="4d964a43f48520428edfadad534fa0a3279deb84">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Hardware-release_b5689ae0ddcf9fc93a21128661fe683163ce5181.jar" />
+        sha1="ba3817622501fb5da8e6b967e42c6717fbd26b02">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_054b3eb482036ceadd8af9700fb5174761433418.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\Blocks-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\Inspection-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="c5216545889f13d4560613d35d498b2ca2db1d1f">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Blocks-release_5aebc811e51bc84f8921c28732ff02ac4f307362.jar" />
+        sha1="9bf02f41db1f6ec91af06ec508925c91ac5c72e9">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Inspection-release_9446c6bdd8fc764600d9dbf929412d90ac558f15.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\d2xx.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="a6cc281519866bbb2d0ac480409212d8d9816d18">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\d2xx_a7ccca06059b368d2a2894c34352a9be0d18f6f8.jar" />
+        sha1="51343b483c5a260b7203ac91d9009f27d38d8e3d">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-RobotCore-release_477e5d65d5bf110d33a3f6b903294f84208f8999.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\Inspection-release\jars\classes.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\Blocks-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="b1a3a00c0ec6312741914629ed283101a3301293">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Inspection-release_c60e2f6369d278b275211506d36b8bb23aa90694.jar" />
+        sha1="bfdfb2339e516dcb78b53e85a9f32e33ee71833f">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-Blocks-release_1546552d846517b50a083a05673e9aabd2f11c7e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\support-annotations-23.4.0.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\ModernRobotics-release\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="15632afee8c14c7c0ba7168d25710c38badee7c8">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_c174e47e2a1e5545fa2a42c23d93fe6ac2c5a0df.jar" />
+        sha1="01999c87afe3d10ffa06f3efa66f39e61e6aba0c">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-ModernRobotics-release_ef4f576d97e0312d191ded0cdb984ef7f8b47dbb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\gson-2.7.jar"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\Vuforia.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="f8bcd8ef93636064d155d8e8ea6541ea7e4280d0">
-        <dex dex="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\intermediates\pre-dexed\debug\gson-2.7_af72a954e38cd328ecc70f39dab618f605aac6d2.jar" />
+        sha1="58b9241fc73757cb6e0cdc32422a71a8e7e6d178">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\Vuforia_03499573f68c3b4d7ab6cc7e85f8cd9155eed7a9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\RobotCore-release\jars\libs\d2xx.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="04004e5f55992d1d8a105a4ade7be348986ed34e">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\d2xx_5531b038c89800ca4241c3d9315bf77fe4280ff1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f285fc2b194a27097336a6b55d55cbe928c5bbba">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\instant-run_1c2d82ade7885fff51ce51883e5e750aa2504f1f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\FtcCommon-release\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="42c41c87fc12bbc65308fd3f55c87d2e1cdf8912">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-FtcCommon-release_27626cec9215528166cc14f764593ee6f36e17b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\exploded-aar\WirelessP2p-release\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\intermediates\pre-dexed\debug\intermediates-exploded-aar-WirelessP2p-release_86505518a4b4cef32229e0b74d4e96c90eafb6d1.jar" />
     </item>
 
 </items>

@@ -1,57 +1,5 @@
 [
     {
-        "outputFile": "C:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\2016velocityvortex-aoir\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 201
-                },
-                "from": {
-                    "file": "C:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\2016velocityvortex-aoir\\FtcRobotController\\src\\main\\res\\values-v14\\styles.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 1869,
-                        "endLine": 42,
-                        "endColumn": 12,
-                        "endOffset": 2015
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 201
-                },
-                "from": {
-                    "file": "C:\\Users\\Sara\\Downloads\\ftc_app-master\\ftc_app-master\\FtcRobotController\\src\\main\\res\\values-v14\\styles.xml",
-                    "position": {
-                        "startLine": 40,
-                        "startColumn": 4,
-                        "startOffset": 1869,
-                        "endLine": 42,
-                        "endColumn": 12,
-                        "endOffset": 2015
-                    }
-                }
-            }
-        ]
-    },
-    {
         "outputFile": "C:\\Users\\Sara\\Downloads\\2016velocityvortex-aoir\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
         "map": [
             {
@@ -68,10 +16,10 @@
                     "position": {
                         "startLine": 40,
                         "startColumn": 4,
-                        "startOffset": 1909,
+                        "startOffset": 1869,
                         "endLine": 42,
                         "endColumn": 12,
-                        "endOffset": 2057
+                        "endOffset": 2015
                     }
                 }
             }

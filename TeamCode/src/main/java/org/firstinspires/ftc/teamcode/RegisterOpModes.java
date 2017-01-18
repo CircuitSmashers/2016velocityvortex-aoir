@@ -22,7 +22,7 @@ class RegisterOpModes
     @OpModeRegistrar
     public static void registerMyOpModes(OpModeManager manager) {
 
-        manager.register("TeleOp_CS",       teleop_CS.class);
+        manager.register("TeleOp_CS8341",       teleop_CS.class);
 
     }
 }

@@ -32,39 +32,28 @@ public class Color_Sensor_Auto extends LinearOpMode {
 
         colorSensor.enableLed(bLedOn);
 
-        waitForStart();
         //optical sensor detecting
 
         do {
             robot.leftMotor1.setPower(0.5);
-            robot.leftMotor2.setPower(0.5);
             robot.rightMotor1.setPower(0.5);
-            robot.rightMotor2.setPower(0.5);
         }
         while(!touchSensor.isPressed());
         robot.leftMotor1.setPower(0);
-        robot.leftMotor2.setPower(0);
         robot.rightMotor1.setPower(0);
-        robot.rightMotor2.setPower(0);
 
         if (colorSensor.blue() > 2) {
             robot.leftMotor1.setPower(0.5);
-            robot.leftMotor2.setPower(0.5);
             robot.rightMotor1.setPower(0.5);
-            robot.rightMotor2.setPower(0.5);
             sleep(500);
         } else if (colorSensor.red() > 2) {
             robot.leftMotor1.setPower(-0.5);
-            robot.leftMotor2.setPower(-0.5);
             robot.rightMotor1.setPower(-0.5);
-            robot.rightMotor2.setPower(-0.5);
             sleep(500);
             //add other motor movement here to push other side of beacon
         }
         robot.leftMotor1.setPower(0);
-        robot.leftMotor2.setPower(0);
         robot.rightMotor1.setPower(0);
-        robot.rightMotor2.setPower(0);
 
         while (opModeIsActive()) {
             Color.RGBToHSV(colorSensor.red() * 8, colorSensor.green() * 8, colorSensor.blue() * 8, hsvValues);

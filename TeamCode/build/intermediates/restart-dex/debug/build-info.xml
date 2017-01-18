@@ -4,33 +4,33 @@
     api-level="19"
     density="hdpi"
     format="8"
-    plugin-version="2.2.2"
-    timestamp="607857749561658"
-    token="-6470705548081241557"
+    plugin-version="2.2.3"
+    timestamp="1285217619595226"
+    token="-7819116386495487181"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="7214" />
+        duration="4474" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="401" />
+        duration="0" />
     <task
         name="verifier"
-        duration="8" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\outputs\apk\TeamCode-debug.apk"
+        location="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\outputs\apk\TeamCode-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="1090724160169844"
+        timestamp="1734045652342427"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Sara\Downloads\ftc_app-master\ftc_app-master\TeamCode\build\outputs\apk\TeamCode-debug.apk"
+            location="C:\Users\Sara\Downloads\2016velocityvortex-aoir\TeamCode\build\outputs\apk\TeamCode-debug.apk"
             type="MAIN" />
     </build>
 

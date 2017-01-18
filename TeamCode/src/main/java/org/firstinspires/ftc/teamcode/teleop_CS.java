@@ -61,19 +61,16 @@ class teleop_CS extends LinearOpMode {
 
     /* Declare OpMode members. */
     private Hardware        robot           = new Hardware();              // Use hardware program
-    /* (Servo Code)
-    double          arm1Position     = robot.ARM1_HOME;                   // Servo safe position
-    double          arm2Position    = robot.ARM2_HOME;                  // Servo safe position
-    final double    ARM1_SPEED      = 0.01 ;                            // sets rate to move servo
-    final double    ARM2_SPEED       = 0.01 ;                            // sets rate to move servo
-    */
+
+    private double          catcherPosition     = Hardware.MID_SERVO;                   // Servo safe position
+
 
     @Override
     public void runOpMode() throws InterruptedException {
-        double left;
-        double right;
-        double shooter;
-        double particle;
+        double left = 0;
+        double right = 0;
+        double winch = 0;
+        double particle = 0;
 
         /* Initialize the hardware variables.
          * The init() method of the hardware class does all the work here
@@ -91,22 +88,23 @@ class teleop_CS extends LinearOpMode {
         while (opModeIsActive()) {
 
             // Run wheels in tank mode (note: The joystick goes negative when pushed forwards, so negate it)
-            left = Range.clip(-gamepad1.left_stick_y, -0.7,0.7);
-            right = Range.clip(-gamepad1.right_stick_y, -0.7,0.7);
-            shooter = -gamepad2.right_stick_y;
-            particle = -gamepad2.left_stick_y;
+            left = Range.clip(-gamepad1.left_stick_y, -1,1);
+            right = Range.clip(-gamepad1.right_stick_y, -1,1);
+            particle = -gamepad2.right_stick_y;
+            winch = gamepad2.left_stick_y;
             robot.leftMotor1.setPower(left);
             robot.rightMotor1.setPower(right);
 
-            // Use gamepad Y & A raise and lower the arm
-            /* (Servo Code)
-            if (gamepad2.a)
-                arm1Position += ARM1_SPEED;
-            else if (gamepad2.y)
-                arm1Position -= ARM1_SPEED;
-            */
-            //shooter motor, particle motor, and arm motor if/else if/else code
-            if (gamepad2.left_trigger == 1) { //Gamepad2 Left Trigger is equal to one so shooterMotor spins counterclockwise relative to motor
+            // Use gamepad Y & A raise and lower the catcher
+            double CATCHER_SPEED = 0.05;
+            if (gamepad2.y)
+                catcherPosition += CATCHER_SPEED;
+            else if (gamepad2.a)
+                catcherPosition -= CATCHER_SPEED;
+
+
+            //shooter motor, particle motor, and conveyor motor if/else if/else code
+            if (gamepad2.left_trigger == 1) { //Gamepad2 left Trigger is equal to one so shooterMotor spins counterclockwise relative to motor
                 robot.shooterMotor.setPower(1);
             }
             else if (gamepad2.right_trigger == 1) { //Gamepad2 Right Trigger is equal to one so shooterMotor spins clockwise relative to motor
@@ -115,69 +113,51 @@ class teleop_CS extends LinearOpMode {
             else { //Gamepad2 has no trigger movement so shooterMotor doesn't move
                 robot.shooterMotor.setPower(0);
             }
-            if (-gamepad2.left_stick_y > 0) { //Gamepad2 Left Stick Y is less than zero so particleMotor spins counterclockwise relative to motor
+            if (-gamepad2.right_stick_y > 0) { //Gamepad2 Right Stick Y is less than zero so particleMotor spins counterclockwise relative to motor
                 robot.particleMotor.setPower(1);
             }
-            else if (-gamepad2.left_stick_y < 0) { //Gamepad2 Left Stick Y is more than zero so particleMotor spins clockwise relative to motor
+            else if (-gamepad2.right_stick_y < 0) { //Gamepad2 Right Stick Y is more than zero so particleMotor spins clockwise relative to motor
                 robot.particleMotor.setPower(-1);
             }
-            else { //Gamepad2 Left Stick Y is still so particleMotor doesn't move
+            else { //Gamepad2 Right Stick Y is still so particleMotor doesn't move
                 robot.particleMotor.setPower(0);
             }
 
-            //winch motors control code
-            /*
-            if (-gamepad2.left_trigger == 1) { //Gamepad2 Right Stick Y is less than zero so shooterMotor spins counterclockwise relative to motor
-                robot.shooterMotor.setPower(1);
+            //winch and conveyor motors control code
+            if (-gamepad2.left_stick_y > 0) { //Gamepad2 Left Stick Y is less than zero so winchMotor spins counterclockwise relative to motor
+                robot.winchMotor.setPower(1);
             }
-            else if (-gamepad2.right_stick_y < 0) { //Gamepad2 Right Stick Y is more than zero so shooterMotor spins clockwise relative to motor
-                robot.shooterMotor.setPower(-1);
+            else if (-gamepad2.left_stick_y < 0) { //Gamepad2 Left Stick Y is more than zero so winchMotor spins clockwise relative to motor
+                robot.winchMotor.setPower(-1);
             }
-            else { //Gamepad2 Right Stick Y is still so shooterMotor doesn't move
-                robot.shooterMotor.setPower(0);
+            else { //Gamepad2 Right Stick Y is still so winchMotor doesn't move
+                robot.winchMotor.setPower(0);
             }
-            if (-gamepad2.left_stick_y > 0) { //Gamepad2 Left Stick Y is less than zero so particleMotor spins counterclockwise relative to motor
-                robot.particleMotor.setPower(1);
+            if (gamepad2.x) {
+                robot.conveyorMotor.setPower(0.1);
             }
-            else if (-gamepad2.left_stick_y < 0) { //Gamepad2 Left Stick Y is more than zero so particleMotor spins clockwise relative to motor
-                robot.particleMotor.setPower(-1);
+            else if (gamepad2.b) {
+                robot.conveyorMotor.setPower(-0.5);
             }
-            else { //Gamepad2 Left Stick Y is still so particleMotor doesn't move
-                robot.particleMotor.setPower(0);
-            }
-            */
+        }
 
-            // Use gamepad X & B to open and close the claw
-            /* (Servo Code)
-           if (gamepad2.x)
-                arm2Position += ARM2_SPEED;
-            else if (gamepad2.b)
-                arm2Position -= ARM2_SPEED;
-            */
 
-            // Move both servos to new position.
-            /* (Servo Code)
-            arm1Position  = Range.clip(arm1Position, robot.ARM1_MIN_RANGE, robot.ARM1_MAX_RANGE);
-            robot.armServo1.setPosition(arm1Position);
-            arm2Position = Range.clip(arm2Position, robot.ARM2_MIN_RANGE, robot.ARM2_MAX_RANGE);
-            robot.armServo2.setPosition(arm2Position);
-            */
+            // Move servo to new position.
+            catcherPosition  = Range.clip(catcherPosition, Hardware.CATCHER_MIN_RANGE, Hardware.CATCHER_MAX_RANGE);
+            robot.catcherServo.setPosition(catcherPosition);
 
 
             //Send telemetry message to signify robot running;
-            /* (Servo Code)
-            telemetry.addData("arm1",   "%.2f", arm1Position);
-            telemetry.addData("arm2",  "%.2f", arm2Position);
-            */
+
+            //telemetry.addData("catcher arm",   "%.2f", catcherPosition);
             telemetry.addData("left",  "%.2f", left);
             telemetry.addData("right", "%.2f", right);
-            telemetry.addData("shooter", "%.2f", shooter);
+            telemetry.addData("winch", "%.2f", winch);
             telemetry.addData("particle", "%.2f", particle);
             telemetry.update();
 
             // Pause for metronome tick.  40 mS each cycle = update 25 times a second.
             robot.waitForTick(40);
             idle(); // Always call idle() at the bottom of your while(opModeIsActive()) loop
-        }
-    }
-}
+            }
+            }
